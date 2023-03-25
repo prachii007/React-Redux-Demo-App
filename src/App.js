@@ -12,10 +12,12 @@ function App() {
             <nav className="navbar bg-primary text-white text-center">
               <div class="container-fluid">
                 <Link to="/basic" className="nav-link nav-item ps-5">Basic</Link>
-                {/* <Link to="/education" className="nav-link nav-item">Education</Link> */}
+                <Link to="/education" className="nav-link nav-item">Education</Link>
 
                 <Link to="/cont" className="nav-link nav-item">Contact</Link>
-                <Link to="/experience" className="nav-link nav-item pe-5">Experience</Link>
+                <Link to="/experience" className="nav-link nav-item ">Experience</Link>
+                <Link to="/viewall" className="nav-link nav-item pe-5">View all</Link>
+
               </div>
             </nav>
           </div>
@@ -27,6 +29,7 @@ function App() {
         <Route exact path="/cont" element={<Mycontact />} />
         {/* <Route exact path="/education" element={<Myeducation />} /> */}
         <Route exact path="/experience" element={<Myexperience />} />
+        {/* <Route exact path="/viewall" element={<Myviewall />} /> */}
 
       </Routes>
     </HashRouter>

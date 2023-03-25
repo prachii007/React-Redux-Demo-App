@@ -79,11 +79,11 @@ const Myexperience = () => {
                     <label>All Tech Skills You Have</label>
                 </div>
                 <div className="col-lg-5">
-                    <input type="number"
+                    <textarea type="number"
                         className="form-control border border-primary mb-3"
 
                         onChange={obj => pickSkills(obj.target.value)} value={totalSkills}
-                    />
+                    rows="6"></textarea>
                 </div>
             </div>
 

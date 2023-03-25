@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
+import Mybasic from "./basic";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <div className="container mt-5">
+        <div className="row">
+
+          <div className="col-lg-8">
+            <div className="btn-group">
+              <Link to="/basic" className=" btn btn-primary">Basic</Link>
+              <Link to="/user" className=" btn btn-secondary">User</Link>
+              <Link to="/product" className=" btn btn-info">Manage Product</Link>
+              <Link to="/api" className=" btn btn-danger">Manage Api</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Routes>
+        <Route exact path="/basic" element={<Mybasic />} />
+      </Routes>
+    </HashRouter>
   );
 }
 

@@ -27,7 +27,7 @@ let Mybasic = () => {
         let binfo = { type: "deletebasic", bindex: index };
         dispatch(binfo);
     }
-}
+
 return (
     <div className="container mt-5 text danger">
         <div className="row">
@@ -109,4 +109,5 @@ return (
         </div>
     </div>
 )
+}
 export default Mybasic;

@@ -1,5 +1,7 @@
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import Mybasic from "./basic";
+import Mycontact from "./contact";
+import Myexperience from "./experience";
 function App() {
   return (
     <HashRouter>
@@ -10,9 +12,9 @@ function App() {
             <nav className="navbar bg-primary text-white text-center">
               <div class="container-fluid">
                 <Link to="/basic" className="nav-link nav-item ps-5">Basic</Link>
-                <Link to="/user" className="nav-link nav-item">User</Link>
-                <Link to="/product" className="nav-link nav-item">Manage Product</Link>
-                <Link to="/api" className="nav-link nav-item pe-5">Manage Api</Link>
+                <Link to="/contact" className="nav-link nav-item">Contact</Link>
+                {/* <Link to="/education" className="nav-link nav-item">Education</Link> */}
+                <Link to="/experience" className="nav-link nav-item pe-5">Experience</Link>
               </div>
             </nav>
           </div>
@@ -20,6 +22,10 @@ function App() {
       </div>
       <Routes>
         <Route exact path="/basic" element={<Mybasic />} />
+        <Route exact path="/basic" element={<Mycontact />} />
+        {/* <Route exact path="/basic" element={<Myeducation />} /> */}
+        <Route exact path="/basic" element={<Myexperience/>} />
+
       </Routes>
     </HashRouter>
   );

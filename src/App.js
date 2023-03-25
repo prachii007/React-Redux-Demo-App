@@ -7,12 +7,14 @@ function App() {
         <div className="row">
 
           <div className="col-lg-8">
-            <div className="btn-group">
-              <Link to="/basic" className=" btn btn-primary">Basic</Link>
-              <Link to="/user" className=" btn btn-secondary">User</Link>
-              <Link to="/product" className=" btn btn-info">Manage Product</Link>
-              <Link to="/api" className=" btn btn-danger">Manage Api</Link>
-            </div>
+            <nav className="navbar bg-primary text-white text-center">
+              <div class="container-fluid">
+                <Link to="/basic" className="nav-link nav-item ps-5">Basic</Link>
+                <Link to="/user" className="nav-link nav-item">User</Link>
+                <Link to="/product" className="nav-link nav-item">Manage Product</Link>
+                <Link to="/api" className="nav-link nav-item pe-5">Manage Api</Link>
+              </div>
+            </nav>
           </div>
         </div>
       </div>

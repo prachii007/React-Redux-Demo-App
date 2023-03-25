@@ -7,7 +7,7 @@ let Mybasic = () => {
     let [emailId, pickEmailId] = useState("");
 
     let dispatch = useDispatch();
-    // let basic =useSelector(state=>state.Basiclist);
+    let basic =useSelector(state=>state.Basiclist);
     const save = () => {
         let basicinfo = {
             name: fullName,

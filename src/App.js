@@ -6,7 +6,7 @@ function App() {
       <div className="container mt-5">
         <div className="row">
 
-          <div className="col-lg-8">
+          <div className="col-lg-12">
             <nav className="navbar bg-primary text-white text-center">
               <div class="container-fluid">
                 <Link to="/basic" className="nav-link nav-item ps-5">Basic</Link>

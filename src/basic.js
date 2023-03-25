@@ -28,51 +28,64 @@ let Mybasic = () => {
         dispatch(binfo);
     }
 
-return (
-    <div className="container mt-5 text danger">
-        <div className="row">
-            <div className="col-lg-12 text-center">
-                <h1>Basic Details</h1>
+    return (
+        <div className="container mt-5 text-danger">
+            <div className="row justify-content-center ">
+                <div className="col-lg-9  text-center">
+                    <h1 className="mb-2">Basic Details</h1>
+                </div>
             </div>
-        </div>
-        <div className="row">
-            <div className="col-lg-6">
-                <label>Name :</label>
+            <div className="row justify-content-center">
+                <div className="col-lg-9">
+                    <div className="row">
+                        <div className="col-lg-6 text-end">
+                            <label >Name :</label>
+                        </div>
+                        <div className="col-lg-3">
+                            <input type="text"
+                                className="form-control border border-danger mb-3"
+                                onChange={obj => pickName(obj.target.value)} value={fullName}
+                            />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-lg-6 text-end">
+                            <label>Mobile :</label>
+                        </div>
+                        <div className="col-lg-3">
+                            <input type="number"
+                                className="form-control border border-danger mb-3"
+
+                                onChange={obj => pickMobile(obj.target.value)} value={mobile}
+                            />
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-6 text-end">
+                            <label>Email :</label>
+                        </div>
+                        <div className="col-lg-3">
+                            <input type="email"
+                                className="form-control border border-danger mb-3"
+
+                                onChange={obj => pickEmailId(obj.target.value)} value={emailId}
+                            />
+                        </div>
+                    </div>
+                    <div className="row ">
+                        <div className="col-lg-6">
+                        </div>
+                        <div className="col-lg-3 text-center ">
+                            <button className="btn btn-primary rounded" onClick={save}>Save</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="col-lg-6">
-                <input type="text"
-                    onChange={obj => pickName(obj.target.value)} value={fullName}
-                />
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-lg-6">
-                <label>Mobile :</label>
-            </div>
-            <div className="col-lg-6">
-                <input type="number"
-                    onChange={obj => pickMobile(obj.target.value)} value={mobile}
-                />
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-lg-6">
-                <label>Email :</label>
-            </div>
-            <div className="col-lg-6">
-                <input type="email"
-                    onChange={obj => pickEmailId(obj.target.value)} value={emailId}
-                />
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-lg-6">
-                <button className="btn btn-primary rounded-pill" onClick={save}>Save</button>
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-lg-10">
-                {/* <table className="table table-bordered">
+
+            <div className="row">
+                <div className="col-lg-10">
+                    {/* <table className="table table-bordered">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -104,10 +117,11 @@ return (
                     </tbody>
 
                 </table> */}
+                </div>
+
             </div>
 
         </div>
-    </div>
-)
+    )
 }
 export default Mybasic;

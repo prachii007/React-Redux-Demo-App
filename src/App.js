@@ -2,6 +2,7 @@ import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import Mybasic from "./basic";
 import Mycontact from "./contact";
 import Myexperience from "./experience";
+import Myviewall from "./viewAll";
 function App() {
   return (
     <HashRouter>
@@ -29,7 +30,7 @@ function App() {
         <Route exact path="/cont" element={<Mycontact />} />
         {/* <Route exact path="/education" element={<Myeducation />} /> */}
         <Route exact path="/experience" element={<Myexperience />} />
-        {/* <Route exact path="/viewall" element={<Myviewall />} /> */}
+        <Route exact path="/viewall" element={<Myviewall />} />
 
       </Routes>
     </HashRouter>

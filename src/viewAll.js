@@ -12,17 +12,21 @@ const Myviewall = () => {
                 <div className="col-lg-4">
                     <h3>Basic</h3>
                     {
-                        mybasic.map((name, index) => {
+                        mybasic.map((info, index) => {
                             return (
-                                <p key={index} >
-                                    {name}
-                                </p>
+                                <div key={index} >
+                                    <p>{info.name}</p>
+                                    <p>{info.mobile}</p>
+                                    <p>{info.email}</p>
+                                </div>
+
+
                             )
                         })
                     }
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 export default Myviewall;

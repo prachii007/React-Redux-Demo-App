@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 const Myviewall = () => {
     let mybasic = useSelector(state => state.Basiclist);
+    let contact = useSelector(state => state.Contactlist);
+    let experience = useSelector(state => state.Experiencelist);
     return (
         <div className="container mt-4 text-info">
             <div className="row text-center">
@@ -10,7 +12,7 @@ const Myviewall = () => {
             </div>
             <div className="row">
                 <div className="col-lg-3">
-                <h2 className="display-6 text-center">Basic</h2>
+                    <h2 className="display-6 text-center">Basic</h2>
 
                     {
                         mybasic.map((info, index) => {

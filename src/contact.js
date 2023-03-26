@@ -19,9 +19,9 @@ let Mycontact = () => {
         pickPerm("");
 
     }
-    let contact = useState(state => state.Contactlist);
+    let contact = useSelector(state => state.Contactlist);
     const delAdd = (index) => {
-        let cinfo = { type: "deletecontact", cinfo: index };
+        let cinfo = { type: "deletecontact", cindex: index };
         dispatch(cinfo);
     }
     return (
@@ -50,7 +50,7 @@ let Mycontact = () => {
                 </div>
             </div>
             <div className="row justify-content-center">
-                <div className="col-lg-3 text-center"><button className="btn btn-primary">Save</button></div>
+                <div className="col-lg-3 text-center"><button className="btn btn-primary" onClick={save}>Save</button></div>
             </div>
         </div>
 

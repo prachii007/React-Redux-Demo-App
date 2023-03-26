@@ -26,9 +26,9 @@ const Myexperience = () => {
         pickExp("");
 
     }
-    let experience = useState(state => state.Experiencelist);
+    let experience = useSelector(state => state.Experiencelist);
     const delAdd = (index) => {
-        let einfo = { type: "deleteExp", einfo: index };
+        let einfo = { type: "deleteExp", eindex: index };
         dispatch(einfo);
     }
     return (
@@ -89,7 +89,7 @@ const Myexperience = () => {
 
             <div className="row justify-content-center">
                 <div className="col-lg-5 text-center">
-                    <button className="btn btn-primary px-5">Save</button>
+                    <button className="btn btn-primary px-5" onClick={save}>Save</button>
                 </div>
             </div>
         </div>

@@ -26,7 +26,7 @@ const Myexperience = () => {
         pickExp("");
 
     }
-    // let experience = useState(state => state.Experiencelist);
+    let experience = useState(state => state.Experiencelist);
     const delAdd = (index) => {
         let einfo = { type: "deleteExp", einfo: index };
         dispatch(einfo);

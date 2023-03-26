@@ -19,7 +19,7 @@ let Mycontact = () => {
         pickPerm("");
 
     }
-    // let contact = useState(state => state.Contactlist);
+    let contact = useState(state => state.Contactlist);
     const delAdd = (index) => {
         let cinfo = { type: "deletecontact", cinfo: index };
         dispatch(cinfo);

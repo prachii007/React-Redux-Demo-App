@@ -9,18 +9,17 @@ const Myviewall = () => {
                 </div>
             </div>
             <div className="row">
-                <div className="col-lg-4">
-                    <h3>Basic</h3>
+                <div className="col-lg-3">
+                <h2 className="display-6 text-center">Basic</h2>
+
                     {
                         mybasic.map((info, index) => {
                             return (
-                                <div key={index} >
+                                <div key={index} className="border border-info p-4">
                                     <p>{info.name}</p>
                                     <p>{info.mobile}</p>
                                     <p>{info.email}</p>
                                 </div>
-
-
                             )
                         })
                     }

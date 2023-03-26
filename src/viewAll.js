@@ -17,10 +17,41 @@ const Myviewall = () => {
                     {
                         mybasic.map((info, index) => {
                             return (
-                                <div key={index} className="border border-info p-4">
-                                    <p>{info.name}</p>
-                                    <p>{info.mobile}</p>
-                                    <p>{info.email}</p>
+                                <div key={index} className="border rounded border-info p-4 mb-4">
+                                    <p>Name: {info.name}</p>
+                                    <p>Mobile:{info.mobile}</p>
+                                    <p>Email: {info.email}</p>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+                <div className="col-lg-3">
+                    <h2 className="display-6 text-center">Contact</h2>
+
+                    {
+                        contact.map((info, index) => {
+                            return (
+                                <div key={index} className="border rounded border-info p-4 mb-4">
+                                    <p>Local Address: {info.local}</p>
+                                    <p>Permanent Address: {info.perm}</p>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+                <div className="col-lg-3">
+                    <h2 className="display-6 text-center">Experience</h2>
+
+                    {
+                        experience.map((info, index) => {
+                            return (
+                                <div key={index} className="border rounded border-info p-4 mb-4">
+                                    <p>Total Companies Worked at: {info.comp}</p>
+                                    <p>Total Projects: {info.proj}</p>
+                                    <p>Total Years of Experience: {info.exp}</p>
+                                    <p>Total Tech Skills: {info.skill}</p>
+
                                 </div>
                             )
                         })

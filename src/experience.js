@@ -27,7 +27,7 @@ const Myexperience = () => {
 
     }
     let experience = useSelector(state => state.Experiencelist);
-    const delAdd = (index) => {
+    const delExp = (index) => {
         let einfo = { type: "deleteExp", eindex: index };
         dispatch(einfo);
     }
@@ -40,14 +40,13 @@ const Myexperience = () => {
             </div>
             <div className="row justify-content-center">
                 <div className="col-lg-3">
-                    <label>Total No of Company Worked</label>
+                    <label>Total No of Companies Worked At</label>
                 </div>
                 <div className="col-lg-5">
 
                     <input type="text"
                         className="form-control border border-primary mb-3"
-                        onChange={obj => pickComp(obj.target.value)} value={totalComp}
-                    />
+                        onChange={obj => pickComp(obj.target.value)} value={totalComp} />
                 </div>
             </div>
             <div className="row justify-content-center">
@@ -58,8 +57,7 @@ const Myexperience = () => {
                     <input type="number"
                         className="form-control border border-primary mb-3"
 
-                        onChange={obj => pickProj(obj.target.value)} value={totalProj}
-                    />
+                        onChange={obj => pickProj(obj.target.value)} value={totalProj} />
                 </div>
             </div>
             <div className="row justify-content-center">
@@ -70,8 +68,7 @@ const Myexperience = () => {
                     <input type="number"
                         className="form-control border border-primary mb-3"
 
-                        onChange={obj => pickExp(obj.target.value)} value={totalExp}
-                    />
+                        onChange={obj => pickExp(obj.target.value)} value={totalExp} />
                 </div>
             </div>
             <div className="row justify-content-center">
@@ -81,21 +78,51 @@ const Myexperience = () => {
                 <div className="col-lg-5">
                     <textarea type="number"
                         className="form-control border border-primary mb-3"
-
                         onChange={obj => pickSkills(obj.target.value)} value={totalSkills}
-                    rows="6"></textarea>
+                        rows="6"></textarea>
                 </div>
             </div>
-
             <div className="row justify-content-center">
                 <div className="col-lg-3"></div>
                 <div className="col-lg-5 text-center">
                     <button className="btn btn-primary px-5" onClick={save}>Save</button>
                 </div>
             </div>
+            <div className="row mt-4 justify-content-center">
+                <div className="col-lg-8">
+                    <table className="table table-bordered border-primary">
+                        <thead>
+                            <tr className="text-center">
+                                <th>Total Companies Worked At</th>
+                                <th>Total Projects</th>
+                                <th>YOE</th>
+                                <th>Tech Skills</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                experience.map((einfo, index) => {
+                                    return (
+                                        <tr key={index} className="text-center">
+                                            <td>{einfo.comp}</td>
+                                            <td>{einfo.proj}</td>
+                                            <td>{einfo.exp}</td>
+                                            <td className="text-start">{einfo.skill}</td>
+                                            <td>
+                                                <button className="btn btn-danger btn-sm" onClick={delExp.bind(this, index)}>
+                                                    Delete
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    )
+                                })
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-
     )
-
 }
 export default Myexperience;

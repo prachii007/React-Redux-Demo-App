@@ -80,11 +80,11 @@ let Mybasic = () => {
                     <button className="btn btn-primary mx-5 rounded" onClick={save}>Save</button>
                 </div>
             </div>
-            <div className="row">
-                <div className="col-lg-10">
-                    {/* <table className="table table-bordered">
+            <div className="row mt-4">
+                <div className="col-lg-12">
+                    <table className="table table-bordered border-danger">
                     <thead>
-                        <tr>
+                        <tr className="text-center">
                             <th>Name</th>
                             <th>Mobile</th>
                             <th>Email</th>
@@ -97,7 +97,6 @@ let Mybasic = () => {
                             basic.map((binfo, index) => {
                                 return (
                                     <tr key={index}>
-                                        <td>{index}</td>
                                         <td>{binfo.name}</td>
                                         <td>{binfo.mobile}</td>
                                         <td>{binfo.email}</td>
@@ -113,7 +112,7 @@ let Mybasic = () => {
 
                     </tbody>
 
-                </table> */}
+                </table> 
                 </div>
 
             </div>

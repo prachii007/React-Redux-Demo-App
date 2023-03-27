@@ -39,7 +39,7 @@ const Myexperience = () => {
                 </div>
             </div>
             <div className="row justify-content-center">
-                <div className="col-lg-5 text-center">
+                <div className="col-lg-3">
                     <label>Total No of Company Worked</label>
                 </div>
                 <div className="col-lg-5">
@@ -51,7 +51,7 @@ const Myexperience = () => {
                 </div>
             </div>
             <div className="row justify-content-center">
-                <div className="col-lg-5 text-center">
+                <div className="col-lg-3">
                     <label>Total Projects Worked</label>
                 </div>
                 <div className="col-lg-5">
@@ -63,7 +63,7 @@ const Myexperience = () => {
                 </div>
             </div>
             <div className="row justify-content-center">
-                <div className="col-lg-5 text-center">
+                <div className="col-lg-3">
                     <label>Total Years of Experience</label>
                 </div>
                 <div className="col-lg-5">
@@ -75,7 +75,7 @@ const Myexperience = () => {
                 </div>
             </div>
             <div className="row justify-content-center">
-                <div className="col-lg-5 text-center">
+                <div className="col-lg-3">
                     <label>All Tech Skills You Have</label>
                 </div>
                 <div className="col-lg-5">
@@ -88,6 +88,7 @@ const Myexperience = () => {
             </div>
 
             <div className="row justify-content-center">
+                <div className="col-lg-3"></div>
                 <div className="col-lg-5 text-center">
                     <button className="btn btn-primary px-5" onClick={save}>Save</button>
                 </div>

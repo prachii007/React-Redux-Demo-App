@@ -10,7 +10,7 @@ function App() {
         <div className="row">
 
           <div className="col-lg-12">
-            <nav className="navbar bg-primary text-white text-center">
+            <nav className="navbar rounded bg-primary text-white text-center">
               <div class="container-fluid">
                 <Link to="/basic" className="nav-link nav-item ps-5">Basic</Link>
                 <Link to="/education" className="nav-link nav-item">Education</Link>

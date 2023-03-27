@@ -18,9 +18,9 @@ const Myviewall = () => {
                         mybasic.map((info, index) => {
                             return (
                                 <div key={index} className="border rounded border-info p-4 mb-4">
-                                    <p>Name: {info.name}</p>
-                                    <p>Mobile:{info.mobile}</p>
-                                    <p>Email: {info.email}</p>
+                                    <p><span className="text-black">Name:</span> {info.name}</p>
+                                    <p><span className="text-black">Mobile:</span>  {info.mobile}</p>
+                                    <p><span className="text-black">Email:</span>  {info.email}</p>
                                 </div>
                             )
                         })
@@ -33,8 +33,8 @@ const Myviewall = () => {
                         contact.map((info, index) => {
                             return (
                                 <div key={index} className="border rounded border-info p-4 mb-4">
-                                    <p>Local Address: {info.local}</p>
-                                    <p>Permanent Address: {info.perm}</p>
+                                    <p><span className="text-black">Local Address:</span>  {info.local}</p>
+                                    <p><span className="text-black">Permanent Address:</span> {info.perm}</p>
                                 </div>
                             )
                         })
@@ -47,10 +47,10 @@ const Myviewall = () => {
                         experience.map((info, index) => {
                             return (
                                 <div key={index} className="border rounded border-info p-4 mb-4">
-                                    <p>Total Companies Worked at: {info.comp}</p>
-                                    <p>Total Projects: {info.proj}</p>
-                                    <p>Total Years of Experience: {info.exp}</p>
-                                    <p>Total Tech Skills: {info.skill}</p>
+                                    <p> <span className="text-black">Total Companies Worked at: </span>{info.comp}</p>
+                                    <p><span className="text-black">Total Projects:</span> {info.proj}</p>
+                                    <p><span className="text-black">Total Years of Experience:</span> {info.exp}</p>
+                                    <p><span className="text-black">Total Tech Skills: </span>{info.skill}</p>
 
                                 </div>
                             )

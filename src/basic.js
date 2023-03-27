@@ -100,7 +100,7 @@ let Mybasic = () => {
                                         <td>{binfo.name}</td>
                                         <td>{binfo.mobile}</td>
                                         <td>{binfo.email}</td>
-                                        <td>
+                                        <td className="text-center">
                                             <button className="btn btn-danger btn-sm" onClick={delBasic.bind(this, index)}>
                                                 Delete
                                             </button>

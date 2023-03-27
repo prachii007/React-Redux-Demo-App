@@ -7,7 +7,7 @@ let Mybasic = () => {
     let [emailId, pickEmailId] = useState("");
 
     let dispatch = useDispatch();
-    let basic =useSelector(state=>state.Basiclist);
+    let basic = useSelector(state => state.Basiclist);
     const save = () => {
         let basicinfo = {
             name: fullName,
@@ -36,53 +36,50 @@ let Mybasic = () => {
                 </div>
             </div>
             <div className="row justify-content-center">
-                <div className="col-lg-9">
-                    <div className="row">
-                        <div className="col-lg-6 text-end">
-                            <label >Name :</label>
-                        </div>
-                        <div className="col-lg-3">
-                            <input type="text"
-                                className="form-control border border-danger mb-3"
-                                onChange={obj => pickName(obj.target.value)} value={fullName}
-                            />
-                        </div>
-                    </div>
+                <div className="col-lg-4"></div>
+                <div className="col-lg-1">
+                    <label >Name :</label>
+                </div>
+                <div className="col-lg-3">
+                    <input type="text"
+                        className="form-control border border-danger mb-3"
+                        onChange={obj => pickName(obj.target.value)} value={fullName} />
+                </div>
+                <div className="col-lg-3"></div>
+            </div>
+            <div className="row justify-content-center">
+                <div className="col-lg-4"></div>
 
-                    <div className="row">
-                        <div className="col-lg-6 text-end">
-                            <label>Mobile :</label>
-                        </div>
-                        <div className="col-lg-3">
-                            <input type="number"
-                                className="form-control border border-danger mb-3"
+                <div className="col-lg-1 ">
+                    <label>Mobile :</label>
+                </div>
+                <div className="col-lg-3">
+                    <input type="number"
+                        className="form-control border border-danger mb-3"
 
-                                onChange={obj => pickMobile(obj.target.value)} value={mobile}
-                            />
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-lg-6 text-end">
-                            <label>Email :</label>
-                        </div>
-                        <div className="col-lg-3">
-                            <input type="email"
-                                className="form-control border border-danger mb-3"
-
-                                onChange={obj => pickEmailId(obj.target.value)} value={emailId}
-                            />
-                        </div>
-                    </div>
-                    <div className="row ">
-                        <div className="col-lg-6">
-                        </div>
-                        <div className="col-lg-3 text-center ">
-                            <button className="btn btn-primary rounded" onClick={save}>Save</button>
-                        </div>
-                    </div>
+                        onChange={obj => pickMobile(obj.target.value)} value={mobile} />
+                </div>
+                <div className="col-lg-3"></div>
+            </div>
+            <div className="row justify-content-center">
+                <div className="col-lg-4"></div>
+                <div className="col-lg-1">
+                    <label>Email :</label>
+                </div>
+                <div className="col-lg-3">
+                    <input type="email"
+                        className="form-control border border-danger mb-3"
+                        onChange={obj => pickEmailId(obj.target.value)} value={emailId} />
+                </div>
+                <div className="col-lg-3"></div>
+            </div>
+            <div className="row justify-content-center">
+                <div className="col-lg-6">
+                </div>
+                <div className="col-lg-6">
+                    <button className="btn btn-primary mx-5 rounded" onClick={save}>Save</button>
                 </div>
             </div>
-
             <div className="row">
                 <div className="col-lg-10">
                     {/* <table className="table table-bordered">

@@ -52,8 +52,37 @@ let Mycontact = () => {
             <div className="row justify-content-center">
                 <div className="col-lg-3 text-center"><button className="btn btn-primary" onClick={save}>Save</button></div>
             </div>
+            <div className="row mt-4 justify-content-center">
+                <div className="col-lg-6">
+                    <table className="table table-bordered border-primary">
+                    <thead>
+                        <tr className="text-center">
+                            <th>Local Address</th>
+                            <th>Permanent Address</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            contact.map((cinfo, index) => {
+                                return (
+                                    <tr key={index}>
+                                        <td>{cinfo.local}</td>
+                                        <td>{cinfo.perm}</td>
+                                        <td>
+                                            <button className="btn btn-danger btn-sm" onClick={delAdd.bind(this, index)}>
+                                                Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                </table> 
+                </div>
+            </div>
         </div>
-
     )
 }
 export default Mycontact;
